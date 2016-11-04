@@ -1,0 +1,19 @@
+$list:320px 360px 412px 424px;
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 14px;
+}
+div{
+    font-size: 12px;
+    border: 1px solid #000;
+}
+$design-size:750px;
+@each $w in $list {
+    @media screen and (min-width:#{$w}) {
+      html{
+          font-size: 100px*$w/$design-size;
+      }  
+    }
+}
