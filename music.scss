@@ -1,0 +1,264 @@
+@import 'yidongduan';
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    position: relative;
+    font-size: 22px;
+    font-family: "宋体";
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    background: url(bg.png);
+}
+.icon{
+    font-family: 'iconfont'!important;
+}
+@mixin spans{
+    color: #fff;
+         display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background: rgba(255,255,255,0.2);
+        line-height: 0.8rem;
+        text-align: center;
+}
+audio{
+    display: none;
+}
+.heard{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    .caidan{
+        float: left;
+       @include spans;
+        margin-top: 0.6rem;
+    }
+    .kaiguan{
+        float: right;
+         @include spans;
+        margin-top: 0.6rem;
+    }
+}
+@keyframes zhuan{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+    }
+.cen{
+     width: 100%;
+    height: 5rem;
+     padding: 1rem 2rem;
+     margin-bottom: 1.8rem;
+    .kuang{
+        padding: 0.2rem;
+         width: 4rem;
+         height: 4rem;
+         border-radius: 50%;
+        background: rgba(128,109,113,0.5);
+        .zhe{
+             padding: 0.8rem;
+              width: 3.6rem;
+         height: 3.6rem;
+         border-radius: 50%;
+        background: rgba(191,145,130,0.4);
+        }
+        .tu{
+            padding: 0.1rem;
+             width: 2rem;
+             height: 2rem;
+             border-radius: 50%;
+             overflow: hidden;
+             background: url(zhuan.png);
+             background-size: cover;
+             background-position: 9px -5px;
+             animation: zhuan 10s infinite linear;
+        }
+    }
+    .yinliang{
+        opacity: 0.7;
+        width: 4.2rem;
+        position: absolute;
+        top: 5.5rem;
+        left: 1.7rem;
+        border-top: 0.05rem solid #fff;
+        border-bottom: 0.05rem solid #fff;
+        border-radius:0.1rem ;
+          .cri-yin{
+             width: 0.2rem;
+             height: 0.2rem;
+             border-radius:50%;
+             background: #fff;
+             position: absolute;
+             top: -0.1rem;
+             right: -0.1rem;
+         }
+        
+    }
+     .y-max{
+             color: #fff;
+             font-size: 16px;
+             position: absolute;
+               top: 5.4rem;
+               right: 1.2rem;
+               
+         }
+     .y-min{
+         color: #fff;
+         font-size: 16px;
+         position: absolute;
+           top: 5.4rem;
+           left: 1.2rem;
+     }
+}
+.ci{
+     width: 100%;
+    height: 1.6rem;
+    
+}
+.gongneng{
+      width: 100%;
+    height: 1rem;
+    padding-left: 1rem;
+     padding-right: 1rem;
+     li{
+         padding-left: 0.4rem;
+           width:25%;
+           height: 100%;
+          float: left;
+       span{
+          @include spans;
+          background: rgba(225,225,255,0.01);
+        } 
+     }
+   
+}
+.kongzhi{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    span{
+        color: #fff;
+        font-size: 16px;
+        float: left;
+        margin-right: 0.1rem;
+    }
+    .jindu{
+        opacity: 0.6;
+         width: 66%;
+         height: 0rem;
+         border-top: 0.05rem solid #fff;
+         border-bottom: 0.05rem solid #fff;
+         border-radius:0.1rem ;
+         float: left;
+         margin-left: 0.2rem;
+         margin-right: 0.2rem;
+         margin-top: 0.45rem;
+         .cri{
+             width: 0.2rem;
+             height: 0.2rem;
+             border-radius:50%;
+             background: #fff;
+             position: absolute;
+             top: -0.1rem;
+             left: -0.1rem;
+         }
+    }
+}
+.list{
+     width: 50%;
+     height: 1rem;
+     margin: 0 auto;
+    .last{
+          float: left;
+       @include spans;
+        margin-top: 0.1rem;
+    }
+    .next{
+          float: right;
+       @include spans;
+        margin-top: 0.1rem;
+    }
+    ul{
+        width: 1.2rem;
+        height: 1rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -0.6rem;
+        color: #fff;
+        font-size: 1rem;
+        li{
+             .play{
+                  color: #fff;
+                  font-size: 1rem;
+                  position: absolute;
+                  top: -0.1rem;
+                  left: 0.1rem;
+             } 
+              .stop{
+                  color: #fff;
+                  font-size: 1rem;
+                  position: absolute;
+                  top: -0.1rem;
+                  left: 0.1rem;
+                  display: none;
+             }   
+        }
+    }
+}
+#bflb{
+      color: #fff;
+      font-size: 0.6rem;
+      position: fixed;
+      right: 0.4rem;
+      bottom: 0.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
