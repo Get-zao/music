@@ -127,14 +127,14 @@ $(document).ready(function(){
 	
 	var currentIndex=3;
 	function  render(){
-			$(".name").empty();
+			$(".ul").empty();
 			$.each(music, function(i,v) {
 				var c=(i===currentIndex)?"active":"";
-				$("<li class='"+c+"'><span>"+v.author+'-'+ v.name+"</span></li>").appendTo(".name");
+				$("<li class='"+c+"'><span>"+v.author+'-'+ v.name+"</span></li>").appendTo(".ul");
 			});
 		}
-			$(".name").on("click",function(){
-		    	$(".name").find(".name").removeClass("active");
+			$(".ul").on("click",function(){
+		    	$(".ul").find(".ul").removeClass("active");
 		    	$(this).addClass("active");
 		    	currentIndex=$(this).index();
 		    	audio.src=music[currentIndex].src;
@@ -170,10 +170,19 @@ $(document).ready(function(){
 	bflb.on('touchstart',function(){
 		lb.addClass('xian');
 	})
-	close.on('touchstart',function(){
-		lb.removeClass('xian');
-	})
 	
+	var tou;
+		$("html").on("touchstart",function(e){
+			tou=e.originalEvent.changedTouches[0].clientY;
+		})
+		
+		$("html").on("touchend",function(e){
+			var wei=e.originalEvent.changedTouches[0].clientY;
+			if(wei-tou>=60){
+					lb.removeClass('xian');
+			}
+		})
+
 	
 	
 	

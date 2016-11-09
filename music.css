@@ -141,7 +141,7 @@ audio {
 
 .ci {
   width: 100%;
-  height: 1.6rem; }
+  height: 1.5rem; }
 
 .gongneng {
   width: 100%;
@@ -245,13 +245,13 @@ audio {
   font-size: 0.6rem;
   position: fixed;
   right: 0.4rem;
-  bottom: 0.4rem; }
+  bottom: 0.55rem; }
 
 .bflb {
   width: 100%;
   height: 8rem;
   position: absolute;
-  bottom: -0.5rem;
+  bottom: 0;
   left: 0;
   background: rgba(5, 5, 5, 0.8);
   z-index: 5555;
@@ -288,18 +288,6 @@ audio {
       right: 0; }
   .bflb .ul li:last-child {
     border-bottom: 1px solid #75636F; }
-  .bflb .close {
-    width: 100%;
-    height: 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    color: #fff;
-    font-size: 20px;
-    line-height: 1rem;
-    text-align: center; }
-    .bflb .close span {
-      margin-left: 10px; }
 
 .xian {
   transform: scale(1);
