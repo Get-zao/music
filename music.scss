@@ -274,8 +274,12 @@ audio{
             li:last-child {
                 border-bottom: 1px solid #75636F; 
             }
-        
+            .active{
+                color: greenyellow;
         }
+       }
+      } 
+        
 .xian{
      transform: scale(1);
         opacity: 0.9;

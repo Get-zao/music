@@ -125,23 +125,24 @@ $(document).ready(function(){
 			$(document).off('touchmove');
 	})
 	
-	var currentIndex=3;
+	//歌曲列表
+	var currentIndex=0;
 	function  render(){
 			$(".ul").empty();
 			$.each(music, function(i,v) {
 				var c=(i===currentIndex)?"active":"";
-				$("<li class='"+c+"'><span>"+v.author+'-'+ v.name+"</span></li>").appendTo(".ul");
+				$("<li class='"+c+"'>"+v.author+'-'+ v.name+"<span class='icon'>&#xe6cc;</span></li>").appendTo(".ul");
 			});
-		}
-			$(".ul").on("click",function(){
-		    	$(".ul").find(".ul").removeClass("active");
+			$(".ul").on("touchstart","li",function(){
+		    	$(".ul").find("li").removeClass("active");
 		    	$(this).addClass("active");
 		    	currentIndex=$(this).index();
 		    	audio.src=music[currentIndex].src;
 		    	audio.play();
 		    })
+	}
 			
-//			render();
+			render();
 	
 	//	点击上下首歌播放
 		var last=$('.last')
@@ -150,18 +151,28 @@ $(document).ready(function(){
 			if(currentIndex-1<0){
 				currentIndex=music.length;
 			}
+			$(".ul").find("li").removeClass("active");
+		    $(".ul").find("li").eq(currentIndex-1).addClass("active");
 			audio.src=music[currentIndex-1].src;
+			console.log(music[currentIndex-1].src);
 			audio.play();
 			currentIndex=currentIndex-1;
 		})
 		next.on('touchstart',function(){
+			currentIndex=currentIndex+1;
+			$(".ul").find("li").removeClass("active");
+		    	$(".ul").find("li").eq(currentIndex).addClass("active");
+		    	console.log($(this));
 			if(currentIndex+1>music.length){
 				currentIndex=0;
 			}
-			audio.src=music[currentIndex+1].src;
+			
+			console.log(music[currentIndex].src);
+			audio.src=music[currentIndex].src;
+			
 			audio.play();
-			currentIndex=currentIndex+1;
-		})
+			
+	})
 	
 	//列表显现
 	var bflb=$('#bflb');
